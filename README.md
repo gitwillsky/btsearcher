@@ -11,7 +11,7 @@ Bittorrent search engine implement by Google go language.
 
 ### 使用 (How to use)
 
-1. `go get github.com/gitwillsky/btsearcher_engine`
+1. `go get github.com/gitwillsky/btsearcher`
 2. 需要编辑conf/下的配置文件**app.conf**，重点是DHT的UDP端口以及Mysql数据库链接信息(Need modify **app.conf** configure file at `conf/`, most important is DHT's UDP port and Mysql database options)。
 3. `go run btengine.go`
 
