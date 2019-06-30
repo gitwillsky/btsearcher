@@ -1,4 +1,4 @@
-module btsearcher
+module github.com/gitwillsky/btsearcher
 
 go 1.12
 

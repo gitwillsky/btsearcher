@@ -25,4 +25,4 @@ COPY --from=builder ["/opt/dist", "/opt/"]
 
 EXPOSE 8010
 
-ENTRYPOINT ["/opt/btengine", "-p 8010"]
+ENTRYPOINT ["/opt/btengine", "--port=8010"]

@@ -1,11 +1,11 @@
 package main
 
 import (
-	"btsearcher"
-	"btsearcher/filter"
-	"btsearcher/models"
 	"bytes"
 	"fmt"
+	"github.com/gitwillsky/btsearcher"
+	"github.com/gitwillsky/btsearcher/filter"
+	"github.com/gitwillsky/btsearcher/models"
 	"github.com/marksamman/bencode"
 	log "github.com/sirupsen/logrus"
 	"go.etcd.io/etcd/pkg/fileutil"
