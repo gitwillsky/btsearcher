@@ -1,21 +1,10 @@
 package models
+
 import (
+	"fmt"
 	"github.com/astaxie/beego/orm"
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/astaxie/beego"
-	"fmt"
 )
-
-func init() {
-
-	if err := InitDBC(beego.AppConfig.String("DB.User"),
-		beego.AppConfig.String("DB.Password"),
-		beego.AppConfig.String("DB.Name"),
-		beego.AppConfig.String("DB.Addr"));
-	err != nil {
-		panic(err.Error())
-	}
-}
 
 func InitDBC(dbUser, dbPass, dbName, dbAddr string) error {
 	// 数据库连接字符串
@@ -33,6 +22,5 @@ func InitDBC(dbUser, dbPass, dbName, dbAddr string) error {
 	orm.RegisterModel(new(Torrent), new(File))
 
 	// sync db.
-	orm.RunSyncdb("default", false, false)
-	return nil
+	return orm.RunSyncdb("default", false, false)
 }

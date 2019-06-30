@@ -8,7 +8,7 @@ var keywordReg *regexp.Regexp
 
 // init keyword from conf/key.txt
 func init() {
-	content, err := ioutil.ReadFile("conf/key.txt")
+	content, err := ioutil.ReadFile("key.txt")
 	if err != nil {
 		panic("Read keywords error " + err.Error())
 	}
